@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movement OS | KIN-013 GRAND LAUNCH</title>
+    <title>Movement OS | KIN-013 Founder's Unwind</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
@@ -11,109 +11,119 @@
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .phase-content { display: none; }
         .phase-content.active { display: block; animation: fadeIn 0.3s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="h-screen flex flex-col md:flex-row overflow-hidden">
 
-    <aside class="w-full md:w-80 border-r border-[#333333] bg-[#050505] p-8 flex flex-col">
+    <aside class="w-full md:w-80 border-b md:border-b-0 md:border-r border-[#333333] bg-[#050505] p-8 flex flex-col overflow-y-auto">
         <div class="mb-12">
-            <p class="text-[10px] tracking-widest text-[#00e5ff] font-bold uppercase mb-2">Grand Launch Protocol</p>
+            <p class="text-xs tracking-widest text-gray-500 font-bold uppercase mb-2">Protocol</p>
             <h1 class="text-3xl text-white">KIN-013</h1>
-            <p class="text-sm text-gray-400 mt-2">The Unwind (Founder-Led)</p>
+            <p class="text-sm text-gray-400 mt-2">Founder's Unwind // Grand Launch</p>
         </div>
 
-        <nav class="flex-1 space-y-4">
-            <button onclick="switchPhase('primer')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:bg-[#111111]">1. Primer (Mat)</button>
-            <button onclick="switchPhase('anchor')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:bg-[#111111]">2. Anchor (Reformer)</button>
-            <button onclick="switchPhase('crucible')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:bg-[#111111]">3. Crucible (Barrel)</button>
-            <button onclick="switchPhase('unwind')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:bg-[#111111]">4. Unwind (Cadillac)</button>
+        <nav class="flex-1 space-y-4" id="nav-menu">
+            <button onclick="switchPhase('primer')" class="nav-btn w-full text-left p-4 border border-[#333333] bg-[#111111] hover:border-gray-500 transition-colors active-nav">
+                <span class="text-xs text-gray-500 block mb-1">0:00 - 10:00</span>
+                <span class="font-semibold tracking-wide">1. Primer (Reformer)</span>
+            </button>
+            <button onclick="switchPhase('anchor')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:border-gray-500 transition-colors">
+                <span class="text-xs text-gray-500 block mb-1">10:00 - 25:00</span>
+                <span class="font-semibold tracking-wide">2. Anchor (Reformer)</span>
+            </button>
+            <button onclick="switchPhase('crucible')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:border-gray-500 transition-colors">
+                <span class="text-xs text-gray-500 block mb-1">25:00 - 40:00</span>
+                <span class="font-semibold tracking-wide">3. Tax (Barrel)</span>
+            </button>
+            <button onclick="switchPhase('unwind')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:border-gray-500 transition-colors">
+                <span class="text-xs text-gray-500 block mb-1">40:00 - 50:00</span>
+                <span class="font-semibold tracking-wide">4. Unwind (Barrel)</span>
+            </button>
         </nav>
     </aside>
 
-    <main class="flex-1 bg-[#050505] p-16 overflow-y-auto">
-        <!-- PRIMER: Spine Stretch to Saw -->
+    <main class="flex-1 bg-[#050505] p-8 md:p-16 overflow-y-auto" id="content-area">
+        
         <div id="primer" class="phase-content active">
-            <h2 class="text-4xl mb-8">Primer: Spine Stretch to Saw</h2>
-            <div class="grid grid-cols-2 gap-8">
-                <div class="border border-[#222] p-8 bg-[#0a0a0a]">
-                    <h3 class="text-sm text-gray-500 uppercase mb-4">Execution</h3>
+            <h2 class="text-4xl mb-2">Footwork to Hundred</h2>
+            <p class="text-gray-400 mb-12 uppercase tracking-widest text-sm">Primer // Decompress (Reformer)</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-[#111111] border border-[#333333] p-8">
+                    <h3 class="text-xl mb-4 text-gray-300">Execution Steps</h3>
                     <ul class="space-y-4">
-                        <li>[ ] Axial elongation (stack)</li>
-                        <li>[ ] Articulate down (flexion)</li>
-                        <li>[ ] Rotate & Reach (The Saw)</li>
+                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Pelvic mapping (Footwork)</span></li>
+                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Systemic respiration (Hundred)</span></li>
                     </ul>
                 </div>
-                <div class="border border-[#222] p-8 bg-[#0a0a0a]">
-                    <h3 class="text-sm text-gray-500 uppercase mb-4">Safety Gate</h3>
-                    <p class="text-red-400 font-bold">Pelvic shift/lift during lateral bend.</p>
+                <div class="space-y-8">
+                    <div class="bg-[#111111] border border-[#333333] p-8"><h3 class="text-sm uppercase tracking-widest text-gray-500 mb-2">Technical Cue</h3><p class="text-gray-200">Exhale to initiate pelvic stability; maintain neutral spine during leg movement.</p></div>
                 </div>
             </div>
+            <div class="border border-red-900/50 bg-[#110505] p-8"><h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Safety Gate (QA Fail)</h3><p class="text-red-200 text-lg">Lumbar arching during extension; tension in neck/jaw.</p></div>
         </div>
 
-        <!-- ANCHOR: Reformer Splits -->
         <div id="anchor" class="phase-content">
-            <h2 class="text-4xl mb-8">Anchor: Reformer Front Splits</h2>
-            <div class="grid grid-cols-2 gap-8">
-                <div class="border border-[#222] p-8 bg-[#0a0a0a]">
-                    <h3 class="text-sm text-gray-500 uppercase mb-4">Execution</h3>
+            <h2 class="text-4xl mb-2">Reformer Splits</h2>
+            <p class="text-gray-400 mb-12 uppercase tracking-widest text-sm">Anchor // Stabilise (Reformer)</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-[#111111] border border-[#333333] p-8">
+                    <h3 class="text-xl mb-4 text-gray-300">Execution Steps</h3>
                     <ul class="space-y-4">
-                        <li>[ ] Heavy spring lunge</li>
-                        <li>[ ] Glute-driven carriage press</li>
-                        <li>[ ] Eccentric return (Control)</li>
+                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Heavy spring lunge</span></li>
+                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Glute-driven carriage press</span></li>
                     </ul>
                 </div>
-                <div class="border border-[#222] p-8 bg-[#0a0a0a]">
-                    <h3 class="text-sm text-gray-500 uppercase mb-4">Safety Gate</h3>
-                    <p class="text-red-400 font-bold">Dumping into lower back to force the split.</p>
+                <div class="space-y-8">
+                    <div class="bg-[#111111] border border-[#333333] p-8"><h3 class="text-sm uppercase tracking-widest text-gray-500 mb-2">Technical Cue</h3><p class="text-gray-200">Square ASIS, active glute max on back leg.</p></div>
                 </div>
             </div>
+            <div class="border border-red-900/50 bg-[#110505] p-8"><h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Safety Gate (QA Fail)</h3><p class="text-red-200 text-lg">Dumping into the lower back to force the split.</p></div>
         </div>
 
-        <!-- CRUCIBLE: Barrel Tree to Twist -->
         <div id="crucible" class="phase-content">
-            <h2 class="text-4xl mb-8">Crucible: Barrel Tree to Twist</h2>
-            <div class="grid grid-cols-2 gap-8">
-                <div class="border border-[#222] p-8 bg-[#0a0a0a]">
-                    <h3 class="text-sm text-gray-500 uppercase mb-4">Execution</h3>
+            <h2 class="text-4xl mb-2">Ladder Barrel Arch & Twist</h2>
+            <p class="text-gray-400 mb-12 uppercase tracking-widest text-sm">Tax // Maximum Rotation (Barrel)</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-[#111111] border border-[#333333] p-8">
+                    <h3 class="text-xl mb-4 text-gray-300">Execution Steps</h3>
                     <ul class="space-y-4">
-                        <li>[ ] Articulate back</li>
-                        <li>[ ] Climb tree</li>
-                        <li>[ ] Hold extension</li>
-                        <li>[ ] Unilateral rotation</li>
+                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Articulate backward over the arc</span></li>
+                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Twist torso from ribcage</span></li>
                     </ul>
                 </div>
-                <div class="border border-l-4 border-l-red-600 p-8 bg-[#110505]">
-                    <h3 class="text-sm text-red-500 uppercase mb-4">CRITICAL Safety Gate</h3>
-                    <p class="text-red-200">Flexing/rounding lumbar spine to achieve twist.</p>
+                <div class="space-y-8">
+                    <div class="bg-[#111111] border border-[#333333] p-8"><h3 class="text-sm uppercase tracking-widest text-gray-500 mb-2">Imagery Cue</h3><p class="text-gray-200 italic">"Spiral like a barber pole; hips are concrete."</p></div>
                 </div>
             </div>
+            <div class="border border-red-900/50 bg-[#110505] p-8"><h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Safety Gate</h3><p class="text-red-200 text-lg">Hinging at lumbar instead of articulating through the curve.</p></div>
         </div>
 
-        <!-- UNWIND: Cadillac Tower -->
         <div id="unwind" class="phase-content">
-            <h2 class="text-4xl mb-8">Unwind: Cadillac Tower</h2>
-            <div class="grid grid-cols-2 gap-8">
-                <div class="border border-[#222] p-8 bg-[#0a0a0a]">
-                    <h3 class="text-sm text-gray-500 uppercase mb-4">Execution</h3>
+            <h2 class="text-4xl mb-2">Ladder Barrel Ballet Stretch</h2>
+            <p class="text-gray-400 mb-12 uppercase tracking-widest text-sm">Unwind // Integration (Barrel)</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-[#111111] border border-[#333333] p-8">
+                    <h3 class="text-xl mb-4 text-gray-300">Execution Steps</h3>
                     <ul class="space-y-4">
-                        <li>[ ] Supine setup</li>
-                        <li>[ ] Segmental roll up</li>
-                        <li>[ ] Gravity traction descent</li>
+                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Active hamstring release</span></li>
+                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Segmental spine roll</span></li>
                     </ul>
                 </div>
-                <div class="border border-[#222] p-8 bg-[#0a0a0a]">
-                    <h3 class="text-sm text-gray-500 uppercase mb-4">Safety Gate</h3>
-                    <p class="text-red-400 font-bold">Cervical spine loading (resting weight on neck).</p>
+                <div class="space-y-8">
+                    <div class="bg-[#111111] border border-[#333333] p-8"><h3 class="text-sm uppercase tracking-widest text-gray-500 mb-2">Imagery Cue</h3><p class="text-gray-200 italic">"Drop spine like pearls off a string."</p></div>
                 </div>
             </div>
+            <div class="border border-red-900/50 bg-[#110505] p-8"><h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Safety Gate</h3><p class="text-red-200 text-lg">Posterior pelvic tuck to reach the barrel.</p></div>
         </div>
     </main>
 
     <script>
-        function switchPhase(id) {
-            document.querySelectorAll('.phase-content').forEach(p => p.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
+        function switchPhase(phaseId) {
+            document.querySelectorAll('.phase-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(phaseId).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('bg-[#111111]'));
+            event.currentTarget.classList.add('bg-[#111111]');
         }
     </script>
 </body>
