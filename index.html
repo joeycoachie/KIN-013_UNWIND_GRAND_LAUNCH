@@ -3,128 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movement OS | KIN-013 Founder's Unwind</title>
+    <title>Movement OS | UNWIND PROTOCOL (GRAND LAUNCH)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
+        
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; -webkit-font-smoothing: antialiased; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
         .phase-content { display: none; }
         .phase-content.active { display: block; animation: fadeIn 0.3s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        .clock-display { font-family: 'Courier New', Courier, monospace; letter-spacing: 0.1em; }
     </style>
 </head>
 <body class="h-screen flex flex-col md:flex-row overflow-hidden">
 
-    <aside class="w-full md:w-80 border-b md:border-b-0 md:border-r border-[#333333] bg-[#050505] p-8 flex flex-col overflow-y-auto">
+    <aside class="w-full md:w-80 border-r border-[#333333] bg-[#050505] p-8 flex flex-col">
         <div class="mb-12">
-            <p class="text-xs tracking-widest text-gray-500 font-bold uppercase mb-2">Protocol</p>
-            <h1 class="text-3xl text-white">KIN-013</h1>
-            <p class="text-sm text-gray-400 mt-2">Founder's Unwind // Grand Launch</p>
+            <p class="text-xs tracking-widest text-[#4CAF50] font-bold uppercase mb-2">Grand Launch Protocol</p>
+            <h1 class="text-3xl text-white">UNWIND</h1>
+            <p class="text-sm text-gray-400 mt-2">Optimum Fit System Reset</p>
         </div>
 
-        <nav class="flex-1 space-y-4" id="nav-menu">
-            <button onclick="switchPhase('primer')" class="nav-btn w-full text-left p-4 border border-[#333333] bg-[#111111] hover:border-gray-500 transition-colors active-nav">
-                <span class="text-xs text-gray-500 block mb-1">0:00 - 10:00</span>
-                <span class="font-semibold tracking-wide">1. Primer (Reformer)</span>
-            </button>
-            <button onclick="switchPhase('anchor')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:border-gray-500 transition-colors">
-                <span class="text-xs text-gray-500 block mb-1">10:00 - 25:00</span>
-                <span class="font-semibold tracking-wide">2. Anchor (Reformer)</span>
-            </button>
-            <button onclick="switchPhase('crucible')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:border-gray-500 transition-colors">
-                <span class="text-xs text-gray-500 block mb-1">25:00 - 40:00</span>
-                <span class="font-semibold tracking-wide">3. Tax (Barrel)</span>
-            </button>
-            <button onclick="switchPhase('unwind')" class="nav-btn w-full text-left p-4 border border-[#333333] hover:border-gray-500 transition-colors">
-                <span class="text-xs text-gray-500 block mb-1">40:00 - 50:00</span>
-                <span class="font-semibold tracking-wide">4. Unwind (Barrel)</span>
-            </button>
+        <div class="mb-8 border border-[#333333] bg-[#111111] p-6">
+            <div id="timerDisplay" class="clock-display text-4xl text-white text-center">00:00</div>
+            <div class="flex gap-2 mt-4">
+                <button onclick="toggleTimer()" class="flex-1 border border-[#333333] py-2 text-xs">START/PAUSE</button>
+                <button onclick="resetTimer()" class="flex-1 border border-[#333333] py-2 text-xs">RESET</button>
+            </div>
+        </div>
+
+        <nav class="flex-1 space-y-4">
+            <button onclick="switchPhase('primer')" class="nav-btn w-full text-left p-4 border border-[#333333] bg-[#111111]">1. Primer (Mat)</button>
+            <button onclick="switchPhase('anchor')" class="nav-btn w-full text-left p-4 border border-[#333333]">2. Anchor (Reformer)</button>
+            <button onclick="switchPhase('crucible')" class="nav-btn w-full text-left p-4 border border-[#333333]">3. Tax (Barrel)</button>
+            <button onclick="switchPhase('unwind')" class="nav-btn w-full text-left p-4 border border-[#333333]">4. Unwind (Barrel)</button>
         </nav>
     </aside>
 
-    <main class="flex-1 bg-[#050505] p-8 md:p-16 overflow-y-auto" id="content-area">
-        
+    <main class="flex-1 bg-[#050505] p-16 overflow-y-auto">
+        <!-- 1. PRIMER: SPINE STRETCH -->
         <div id="primer" class="phase-content active">
-            <h2 class="text-4xl mb-2">Footwork to Hundred</h2>
-            <p class="text-gray-400 mb-12 uppercase tracking-widest text-sm">Primer // Decompress (Reformer)</p>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <h2 class="text-4xl mb-12">Spine Stretch to Saw</h2>
+            <div class="grid grid-cols-2 gap-8">
                 <div class="bg-[#111111] border border-[#333333] p-8">
-                    <h3 class="text-xl mb-4 text-gray-300">Execution Steps</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Pelvic mapping (Footwork)</span></li>
-                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Systemic respiration (Hundred)</span></li>
+                        <li>[ ] Axial elongation (stack)</li>
+                        <li>[ ] Articulate down</li>
+                        <li>[ ] Rotate & Reach</li>
                     </ul>
                 </div>
-                <div class="space-y-8">
-                    <div class="bg-[#111111] border border-[#333333] p-8"><h3 class="text-sm uppercase tracking-widest text-gray-500 mb-2">Technical Cue</h3><p class="text-gray-200">Exhale to initiate pelvic stability; maintain neutral spine during leg movement.</p></div>
+                <div class="border border-red-900/50 p-8">
+                    <h3 class="text-red-500 text-xs uppercase mb-2">Safety Gate</h3>
+                    <p>Pelvis shifting during lateral bend.</p>
                 </div>
             </div>
-            <div class="border border-red-900/50 bg-[#110505] p-8"><h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Safety Gate (QA Fail)</h3><p class="text-red-200 text-lg">Lumbar arching during extension; tension in neck/jaw.</p></div>
         </div>
 
+        <!-- 2. ANCHOR: REFORMER SPLITS -->
         <div id="anchor" class="phase-content">
-            <h2 class="text-4xl mb-2">Reformer Splits</h2>
-            <p class="text-gray-400 mb-12 uppercase tracking-widest text-sm">Anchor // Stabilise (Reformer)</p>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <h2 class="text-4xl mb-12">Reformer Front Splits</h2>
+            <div class="grid grid-cols-2 gap-8">
                 <div class="bg-[#111111] border border-[#333333] p-8">
-                    <h3 class="text-xl mb-4 text-gray-300">Execution Steps</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Heavy spring lunge</span></li>
-                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Glute-driven carriage press</span></li>
+                        <li>[ ] Heavy spring lunge</li>
+                        <li>[ ] Glute-driven press</li>
+                        <li>[ ] Eccentric control</li>
                     </ul>
                 </div>
-                <div class="space-y-8">
-                    <div class="bg-[#111111] border border-[#333333] p-8"><h3 class="text-sm uppercase tracking-widest text-gray-500 mb-2">Technical Cue</h3><p class="text-gray-200">Square ASIS, active glute max on back leg.</p></div>
+                <div class="border border-red-900/50 p-8">
+                    <h3 class="text-red-500 text-xs uppercase mb-2">Safety Gate</h3>
+                    <p>Dumping into lower back to force split.</p>
                 </div>
             </div>
-            <div class="border border-red-900/50 bg-[#110505] p-8"><h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Safety Gate (QA Fail)</h3><p class="text-red-200 text-lg">Dumping into the lower back to force the split.</p></div>
         </div>
 
+        <!-- 3. TAX: BARREL TWIST -->
         <div id="crucible" class="phase-content">
-            <h2 class="text-4xl mb-2">Ladder Barrel Arch & Twist</h2>
-            <p class="text-gray-400 mb-12 uppercase tracking-widest text-sm">Tax // Maximum Rotation (Barrel)</p>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <h2 class="text-4xl mb-12">Ladder Barrel: Arch & Twist</h2>
+            <div class="grid grid-cols-2 gap-8">
                 <div class="bg-[#111111] border border-[#333333] p-8">
-                    <h3 class="text-xl mb-4 text-gray-300">Execution Steps</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Articulate backward over the arc</span></li>
-                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Twist torso from ribcage</span></li>
+                        <li>[ ] Hook feet, articulate back</li>
+                        <li>[ ] Extend over apex</li>
+                        <li>[ ] Unilateral rotation</li>
                     </ul>
                 </div>
-                <div class="space-y-8">
-                    <div class="bg-[#111111] border border-[#333333] p-8"><h3 class="text-sm uppercase tracking-widest text-gray-500 mb-2">Imagery Cue</h3><p class="text-gray-200 italic">"Spiral like a barber pole; hips are concrete."</p></div>
+                <div class="border border-red-900/50 p-8">
+                    <h3 class="text-red-500 text-xs uppercase mb-2">Safety Gate</h3>
+                    <p>Hinging at lumbar instead of articulating over curve.</p>
                 </div>
             </div>
-            <div class="border border-red-900/50 bg-[#110505] p-8"><h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Safety Gate</h3><p class="text-red-200 text-lg">Hinging at lumbar instead of articulating through the curve.</p></div>
         </div>
 
+        <!-- 4. UNWIND: BARREL BALLET -->
         <div id="unwind" class="phase-content">
-            <h2 class="text-4xl mb-2">Ladder Barrel Ballet Stretch</h2>
-            <p class="text-gray-400 mb-12 uppercase tracking-widest text-sm">Unwind // Integration (Barrel)</p>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <h2 class="text-4xl mb-12">Ladder Barrel: Ballet Stretch</h2>
+            <div class="grid grid-cols-2 gap-8">
                 <div class="bg-[#111111] border border-[#333333] p-8">
-                    <h3 class="text-xl mb-4 text-gray-300">Execution Steps</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Active hamstring release</span></li>
-                        <li class="flex items-start"><input type="checkbox" class="mt-1 mr-4 bg-[#050505] border-[#333333] w-5 h-5 cursor-pointer"><span class="text-gray-300 leading-relaxed">Segmental spine roll</span></li>
+                        <li>[ ] Leg placement on curve</li>
+                        <li>[ ] Square hips (Level headlights)</li>
+                        <li>[ ] Active eccentric hamstring glide</li>
                     </ul>
                 </div>
-                <div class="space-y-8">
-                    <div class="bg-[#111111] border border-[#333333] p-8"><h3 class="text-sm uppercase tracking-widest text-gray-500 mb-2">Imagery Cue</h3><p class="text-gray-200 italic">"Drop spine like pearls off a string."</p></div>
+                <div class="border border-red-900/50 p-8">
+                    <h3 class="text-red-500 text-xs uppercase mb-2">Safety Gate</h3>
+                    <p>Tucking pelvis (Posterior tilt) to cheat the stretch.</p>
                 </div>
             </div>
-            <div class="border border-red-900/50 bg-[#110505] p-8"><h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-2">Safety Gate</h3><p class="text-red-200 text-lg">Posterior pelvic tuck to reach the barrel.</p></div>
         </div>
     </main>
 
     <script>
-        function switchPhase(phaseId) {
+        function switchPhase(id) {
             document.querySelectorAll('.phase-content').forEach(el => el.classList.remove('active'));
-            document.getElementById(phaseId).classList.add('active');
-            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('bg-[#111111]'));
-            event.currentTarget.classList.add('bg-[#111111]');
+            document.getElementById(id).classList.add('active');
         }
+        let s = 0, t;
+        function toggleTimer() {
+            if(t) { clearInterval(t); t = null; }
+            else t = setInterval(() => { s++; document.getElementById('timerDisplay').innerText = new Date(s * 1000).toISOString().substr(14, 5); }, 1000);
+        }
+        function resetTimer() { clearInterval(t); t = null; s = 0; document.getElementById('timerDisplay').innerText = "00:00"; }
     </script>
 </body>
 </html>
