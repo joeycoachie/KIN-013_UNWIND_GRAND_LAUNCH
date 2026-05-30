@@ -3,130 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movement OS | UNWIND PROTOCOL (GRAND LAUNCH)</title>
+    <title>Movement OS | KIN-013 UNWIND</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
-        
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; -webkit-font-smoothing: antialiased; }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        
-        .phase-content { display: none; }
-        .phase-content.active { display: block; animation: fadeIn 0.3s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-        .clock-display { font-family: 'Courier New', Courier, monospace; letter-spacing: 0.1em; }
+        .grid-card { border: 1px solid #333; padding: 2rem; background: #0a0a0a; }
+        .code-font { font-family: 'Courier New', Courier, monospace; letter-spacing: 0.1em; }
     </style>
 </head>
-<body class="h-screen flex flex-col md:flex-row overflow-hidden">
+<body class="p-8 md:p-16 max-w-5xl mx-auto">
+    <header class="mb-12 border-b border-[#222] pb-8">
+        <p class="text-xs tracking-widest text-[#ff4444] font-bold uppercase mb-2">Founder-Led Exclusive</p>
+        <h1 class="text-5xl text-white mb-2">The Unwind Protocol</h1>
+        <p class="text-[#ff4444] code-font text-sm">KIN-013 // SYSTEMIC DECOMPRESSION</p>
+    </header>
 
-    <aside class="w-full md:w-80 border-r border-[#333333] bg-[#050505] p-8 flex flex-col">
-        <div class="mb-12">
-            <p class="text-xs tracking-widest text-[#4CAF50] font-bold uppercase mb-2">Grand Launch Protocol</p>
-            <h1 class="text-3xl text-white">UNWIND</h1>
-            <p class="text-sm text-gray-400 mt-2">Optimum Fit System Reset</p>
-        </div>
-
-        <div class="mb-8 border border-[#333333] bg-[#111111] p-6">
-            <div id="timerDisplay" class="clock-display text-4xl text-white text-center">00:00</div>
-            <div class="flex gap-2 mt-4">
-                <button onclick="toggleTimer()" class="flex-1 border border-[#333333] py-2 text-xs">START/PAUSE</button>
-                <button onclick="resetTimer()" class="flex-1 border border-[#333333] py-2 text-xs">RESET</button>
+    <div class="space-y-8">
+        <!-- THE SIX ANCHORS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid-card">
+                <h3 class="text-white font-bold mb-2">1. The Barber Pole</h3>
+                <p class="text-gray-400 text-sm italic">"Wring your ribcage out toward the ceiling."</p>
+            </div>
+            <div class="grid-card">
+                <h3 class="text-white font-bold mb-2">2. Climbing The Trunk</h3>
+                <p class="text-gray-400 text-sm italic">"Lift your chest proudly to the sun at the top."</p>
+            </div>
+            <div class="grid-card">
+                <h3 class="text-white font-bold mb-2">3. The Arrowhead</h3>
+                <p class="text-gray-400 text-sm italic">"Shoot the crown of your head through the wall."</p>
+            </div>
+            <div class="grid-card">
+                <h3 class="text-white font-bold mb-2">4. Thread The Needle</h3>
+                <p class="text-gray-400 text-sm italic">"Wring your lungs out like a wet towel."</p>
+            </div>
+            <div class="grid-card">
+                <h3 class="text-white font-bold mb-2">5. The Windmill</h3>
+                <p class="text-gray-400 text-sm italic">"Being pulled safely in two directions."</p>
+            </div>
+            <div class="grid-card">
+                <h3 class="text-white font-bold mb-2">6. Pearls Off The Mat</h3>
+                <p class="text-gray-400 text-sm italic">"Melting away stiffness from top to bottom."</p>
             </div>
         </div>
 
-        <nav class="flex-1 space-y-4">
-            <button onclick="switchPhase('primer')" class="nav-btn w-full text-left p-4 border border-[#333333] bg-[#111111]">1. Primer (Mat)</button>
-            <button onclick="switchPhase('anchor')" class="nav-btn w-full text-left p-4 border border-[#333333]">2. Anchor (Reformer)</button>
-            <button onclick="switchPhase('crucible')" class="nav-btn w-full text-left p-4 border border-[#333333]">3. Tax (Barrel)</button>
-            <button onclick="switchPhase('unwind')" class="nav-btn w-full text-left p-4 border border-[#333333]">4. Unwind (Barrel)</button>
-        </nav>
-    </aside>
-
-    <main class="flex-1 bg-[#050505] p-16 overflow-y-auto">
-        <!-- 1. PRIMER: SPINE STRETCH -->
-        <div id="primer" class="phase-content active">
-            <h2 class="text-4xl mb-12">Spine Stretch to Saw</h2>
-            <div class="grid grid-cols-2 gap-8">
-                <div class="bg-[#111111] border border-[#333333] p-8">
-                    <ul class="space-y-4">
-                        <li>[ ] Axial elongation (stack)</li>
-                        <li>[ ] Articulate down</li>
-                        <li>[ ] Rotate & Reach</li>
-                    </ul>
-                </div>
-                <div class="border border-red-900/50 p-8">
-                    <h3 class="text-red-500 text-xs uppercase mb-2">Safety Gate</h3>
-                    <p>Pelvis shifting during lateral bend.</p>
-                </div>
-            </div>
+        <!-- SAFETY GATE -->
+        <div class="border border-red-900/50 bg-[#110505] p-8 border-l-4 border-l-red-500">
+            <h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-4">QA GATE: NEUTRAL ALIGNMENT</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+                <strong>IF</strong> the client tucks their pelvis under to achieve a deeper hamstring stretch...<br>
+                <strong>THEN</strong> the instructor must immediately lower the leg or step the client back. 
+                <span class="text-red-400 font-bold">Range of Motion (ROM) is never prioritized over neutral alignment.</span>
+            </p>
         </div>
-
-        <!-- 2. ANCHOR: REFORMER SPLITS -->
-        <div id="anchor" class="phase-content">
-            <h2 class="text-4xl mb-12">Reformer Front Splits</h2>
-            <div class="grid grid-cols-2 gap-8">
-                <div class="bg-[#111111] border border-[#333333] p-8">
-                    <ul class="space-y-4">
-                        <li>[ ] Heavy spring lunge</li>
-                        <li>[ ] Glute-driven press</li>
-                        <li>[ ] Eccentric control</li>
-                    </ul>
-                </div>
-                <div class="border border-red-900/50 p-8">
-                    <h3 class="text-red-500 text-xs uppercase mb-2">Safety Gate</h3>
-                    <p>Dumping into lower back to force split.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3. TAX: BARREL TWIST -->
-        <div id="crucible" class="phase-content">
-            <h2 class="text-4xl mb-12">Ladder Barrel: Arch & Twist</h2>
-            <div class="grid grid-cols-2 gap-8">
-                <div class="bg-[#111111] border border-[#333333] p-8">
-                    <ul class="space-y-4">
-                        <li>[ ] Hook feet, articulate back</li>
-                        <li>[ ] Extend over apex</li>
-                        <li>[ ] Unilateral rotation</li>
-                    </ul>
-                </div>
-                <div class="border border-red-900/50 p-8">
-                    <h3 class="text-red-500 text-xs uppercase mb-2">Safety Gate</h3>
-                    <p>Hinging at lumbar instead of articulating over curve.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4. UNWIND: BARREL BALLET -->
-        <div id="unwind" class="phase-content">
-            <h2 class="text-4xl mb-12">Ladder Barrel: Ballet Stretch</h2>
-            <div class="grid grid-cols-2 gap-8">
-                <div class="bg-[#111111] border border-[#333333] p-8">
-                    <ul class="space-y-4">
-                        <li>[ ] Leg placement on curve</li>
-                        <li>[ ] Square hips (Level headlights)</li>
-                        <li>[ ] Active eccentric hamstring glide</li>
-                    </ul>
-                </div>
-                <div class="border border-red-900/50 p-8">
-                    <h3 class="text-red-500 text-xs uppercase mb-2">Safety Gate</h3>
-                    <p>Tucking pelvis (Posterior tilt) to cheat the stretch.</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script>
-        function switchPhase(id) {
-            document.querySelectorAll('.phase-content').forEach(el => el.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-        }
-        let s = 0, t;
-        function toggleTimer() {
-            if(t) { clearInterval(t); t = null; }
-            else t = setInterval(() => { s++; document.getElementById('timerDisplay').innerText = new Date(s * 1000).toISOString().substr(14, 5); }, 1000);
-        }
-        function resetTimer() { clearInterval(t); t = null; s = 0; document.getElementById('timerDisplay').innerText = "00:00"; }
-    </script>
+    </div>
 </body>
 </html>
