@@ -3,61 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movement OS | KIN-013 UNWIND</title>
+    <title>Movement OS | UNWIND PROTOCOL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .grid-card { border: 1px solid #333; padding: 2rem; background: #0a0a0a; }
-        .code-font { font-family: 'Courier New', Courier, monospace; letter-spacing: 0.1em; }
+        .phase-content { display: none; }
+        .phase-content.active { display: block; animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        .ra-module { display: none; }
+        body.ra-active .ra-module { display: block; }
+        .ra-toggle-btn.active { background-color: #1e3a8a; border-color: #3b82f6; }
     </style>
 </head>
-<body class="p-8 md:p-16 max-w-5xl mx-auto">
-    <header class="mb-12 border-b border-[#222] pb-8">
-        <p class="text-xs tracking-widest text-[#ff4444] font-bold uppercase mb-2">Founder-Led Exclusive</p>
-        <h1 class="text-5xl text-white mb-2">The Unwind Protocol</h1>
-        <p class="text-[#ff4444] code-font text-sm">KIN-013 // SYSTEMIC DECOMPRESSION</p>
-    </header>
+<body class="h-screen flex flex-col md:flex-row overflow-hidden">
 
-    <div class="space-y-8">
-        <!-- THE SIX ANCHORS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="grid-card">
-                <h3 class="text-white font-bold mb-2">1. The Barber Pole</h3>
-                <p class="text-gray-400 text-sm italic">"Wring your ribcage out toward the ceiling."</p>
+    <aside class="w-full md:w-80 border-r border-[#333333] bg-[#050505] p-8 flex flex-col overflow-y-auto">
+        <h1 class="text-2xl text-white mb-2">UNWIND PROTOCOL</h1>
+        <p class="text-xs text-[#00e5ff] code-font mb-8">SYSTEMIC DECOMPRESSION</p>
+        
+        <div class="mb-8 border border-[#333333] p-6 bg-[#0a0a0a]">
+            <button id="raToggleBtn" onclick="toggleRA()" class="ra-toggle-btn w-full border border-[#333333] p-3 text-sm text-gray-400">
+                [ ] RA OVERRIDE
+            </button>
+        </div>
+
+        <nav class="space-y-4">
+            <button onclick="switchPhase('p1')" class="nav-btn w-full text-left p-4 border border-[#333333] bg-[#111111]">1. The Barber Pole</button>
+            <button onclick="switchPhase('p2')" class="nav-btn w-full text-left p-4 border border-[#333333]">2. Climbing The Trunk</button>
+            <button onclick="switchPhase('p3')" class="nav-btn w-full text-left p-4 border border-[#333333]">3. The Arrowhead</button>
+            <button onclick="switchPhase('p4')" class="nav-btn w-full text-left p-4 border border-[#333333]">4. Windmill/Needle</button>
+            <button onclick="switchPhase('p5')" class="nav-btn w-full text-left p-4 border border-[#333333]">5. Pearls Reset</button>
+        </nav>
+    </aside>
+
+    <main class="flex-1 p-16 overflow-y-auto">
+        <!-- P1: Barber Pole -->
+        <div id="p1" class="phase-content active">
+            <h2 class="text-4xl mb-8">1. The Barber Pole</h2>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="bg-[#111111] p-8 border border-[#333333]">
+                    <h3 class="text-xs uppercase text-gray-500 mb-4">Execution</h3>
+                    <p>Anchor bilateral ischial tuberosities. Rotate above T12 to wring the ribcage.</p>
+                </div>
+                <div class="bg-[#111111] p-8 border border-[#333333]">
+                    <h3 class="text-xs uppercase text-gray-500 mb-4">Safety Gate</h3>
+                    <p class="text-red-400">Opposite hip lifts to twist (False range)[cite: 5].</p>
+                </div>
             </div>
-            <div class="grid-card">
-                <h3 class="text-white font-bold mb-2">2. Climbing The Trunk</h3>
-                <p class="text-gray-400 text-sm italic">"Lift your chest proudly to the sun at the top."</p>
-            </div>
-            <div class="grid-card">
-                <h3 class="text-white font-bold mb-2">3. The Arrowhead</h3>
-                <p class="text-gray-400 text-sm italic">"Shoot the crown of your head through the wall."</p>
-            </div>
-            <div class="grid-card">
-                <h3 class="text-white font-bold mb-2">4. Thread The Needle</h3>
-                <p class="text-gray-400 text-sm italic">"Wring your lungs out like a wet towel."</p>
-            </div>
-            <div class="grid-card">
-                <h3 class="text-white font-bold mb-2">5. The Windmill</h3>
-                <p class="text-gray-400 text-sm italic">"Being pulled safely in two directions."</p>
-            </div>
-            <div class="grid-card">
-                <h3 class="text-white font-bold mb-2">6. Pearls Off The Mat</h3>
-                <p class="text-gray-400 text-sm italic">"Melting away stiffness from top to bottom."</p>
+            <!-- RA Override -->
+            <div class="ra-module mt-8 border border-[#3b82f6] p-8 bg-[#0a0f1c]">
+                <h3 class="text-[#3b82f6] text-xs uppercase mb-2">RA OVERRIDE</h3>
+                <p>Perform seated on a stability chair with back support to maintain spinal integrity without deep unsupported rotation.</p>
             </div>
         </div>
 
-        <!-- SAFETY GATE -->
-        <div class="border border-red-900/50 bg-[#110505] p-8 border-l-4 border-l-red-500">
-            <h3 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-4">QA GATE: NEUTRAL ALIGNMENT</h3>
-            <p class="text-gray-300 text-sm leading-relaxed">
-                <strong>IF</strong> the client tucks their pelvis under to achieve a deeper hamstring stretch...<br>
-                <strong>THEN</strong> the instructor must immediately lower the leg or step the client back. 
-                <span class="text-red-400 font-bold">Range of Motion (ROM) is never prioritized over neutral alignment.</span>
-            </p>
+        <!-- P2: Climbing The Trunk -->
+        <div id="p2" class="phase-content">
+            <h2 class="text-4xl mb-8">2. Climbing The Trunk</h2>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="bg-[#111111] p-8 border border-[#333333]">
+                    <h3 class="text-xs uppercase text-gray-500 mb-4">Execution</h3>
+                    <p>Segmental extension. Active dorsiflexion. Climb hands up the leg[cite: 5].</p>
+                </div>
+                <div class="bg-[#111111] p-8 border border-[#333333]">
+                    <h3 class="text-xs uppercase text-gray-500 mb-4">Safety Gate</h3>
+                    <p class="text-red-400">Hinging backward with flat back[cite: 5].</p>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- P5: Pearls Reset -->
+        <div id="p5" class="phase-content">
+            <h2 class="text-4xl mb-8">5. Pearls Off The Mat</h2>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="bg-[#111111] p-8 border border-[#333333]">
+                    <h3 class="text-xs uppercase text-gray-500 mb-4">Execution</h3>
+                    <p>Gravity-assisted traction. Posterior pelvic tilt[cite: 5].</p>
+                </div>
+                <div class="bg-[#111111] p-8 border border-[#333333]">
+                    <h3 class="text-xs uppercase text-gray-500 mb-4">Safety Gate</h3>
+                    <p class="text-red-400">Weight resting on C3-C5 (cervical spine)[cite: 5].</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function switchPhase(id) {
+            document.querySelectorAll('.phase-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+        function toggleRA() {
+            document.body.classList.toggle('ra-active');
+            const btn = document.getElementById('raToggleBtn');
+            btn.classList.toggle('active');
+            btn.innerText = document.body.classList.contains('ra-active') ? '[X] RA OVERRIDE ACTIVE' : '[ ] RA OVERRIDE';
+        }
+    </script>
 </body>
 </html>
