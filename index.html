@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIN-013 | UNWIND GRAND LAUNCH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .layer-box { border: 1px solid #222; background: #0a0a0a; padding: 1.5rem; margin-bottom: 2rem; }
+        .clock-display { font-family: 'Courier New', Courier, monospace; letter-spacing: 0.1em; }
+    </style>
+</head>
+<body class="p-8 max-w-5xl mx-auto">
+    <header class="mb-12 border-b border-[#222] pb-6">
+        <p class="text-[10px] uppercase tracking-widest text-[#00e5ff] font-bold">Grand Launch Operational Protocol</p>
+        <h1 class="text-4xl text-white">KIN-013 UNWIND</h1>
+        <p class="text-gray-500 font-mono text-sm mt-2">SYSTEM RESET // KINETIC SIX INTEGRATION</p>
+    </header>
+
+    <!-- TIMER -->
+    <div class="mb-12 border border-[#333] p-8 text-center bg-[#111]">
+        <div id="timerDisplay" class="clock-display text-6xl font-bold mb-6">50:00</div>
+        <button onclick="toggleTimer()" class="border border-[#333] px-12 py-3 hover:bg-[#222] transition-all tracking-widest text-xs uppercase">Start System</button>
+    </div>
+
+    <!-- KINETIC SIX -->
+    <div class="space-y-8">
+        
+        <!-- 01. THE BARBER POLE -->
+        <section class="layer-box">
+            <h2 class="text-2xl mb-4 text-[#00e5ff]">01. THE BARBER POLE</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L1: Foundation</h3><p class="text-sm">Round back, twist R/L on apex.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L2: Load</h3><p class="text-sm">Magic Circle squeeze for shoulder lock.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L3: Flow</h3><p class="text-sm">Continuous wring + isometric hold.</p></div>
+            </div>
+            <div class="border-l-4 border-red-500 pl-4 py-2 bg-[#110505]"><p class="text-red-300 text-[10px] font-bold uppercase tracking-widest">Gate: Opposite sit-bone must remain glued.</p></div>
+        </section>
+
+        <!-- 02. CLIMBING THE TRUNK -->
+        <section class="layer-box">
+            <h2 class="text-2xl mb-4 text-[#00e5ff]">02. CLIMBING THE TRUNK</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L1: Foundation</h3><p class="text-sm">Neural glide on Cadillac bar.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L2: Load</h3><p class="text-sm">Heavy spring for pelvic traction.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L3: Flow</h3><p class="text-sm">Segmental articulation descent.</p></div>
+            </div>
+            <div class="border-l-4 border-red-500 pl-4 py-2 bg-[#110505]"><p class="text-red-300 text-[10px] font-bold uppercase tracking-widest">Gate: Hinging flat-back is prohibited.</p></div>
+        </section>
+
+        <!-- 03. THE ARROWHEAD -->
+        <section class="layer-box">
+            <h2 class="text-2xl mb-4 text-[#00e5ff]">03. THE ARROWHEAD</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L1: Foundation</h3><p class="text-sm">Prone thoracic lift, hands float.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L2: Load</h3><p class="text-sm">Add light DB weights for retraction.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L3: Flow</h3><p class="text-sm">Continuous reach and retract.</p></div>
+            </div>
+            <div class="border-l-4 border-red-500 pl-4 py-2 bg-[#110505]"><p class="text-red-300 text-[10px] font-bold uppercase tracking-widest">Gate: Lumbar pinching is a system failure.</p></div>
+        </section>
+
+        <!-- 04. THREAD THE NEEDLE -->
+        <section class="layer-box">
+            <h2 class="text-2xl mb-4 text-[#00e5ff]">04. THREAD THE NEEDLE</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L1: Foundation</h3><p class="text-sm">Quadruped thoracic release.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L2: Load</h3><p class="text-sm">Side-lying rotation with band.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L3: Flow</h3><p class="text-sm">Rhythmic wringing of the lungs.</p></div>
+            </div>
+            <div class="border-l-4 border-red-500 pl-4 py-2 bg-[#110505]"><p class="text-red-300 text-[10px] font-bold uppercase tracking-widest">Gate: Sinking into shoulder joint.</p></div>
+        </section>
+
+        <!-- 05. THE WINDMILL -->
+        <section class="layer-box">
+            <h2 class="text-2xl mb-4 text-[#00e5ff]">05. THE WINDMILL</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L1: Foundation</h3><p class="text-sm">Passive arm reach/decompression.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L2: Load</h3><p class="text-sm">Resisted reach against spring.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L3: Flow</h3><p class="text-sm">Rotary decompression transition.</p></div>
+            </div>
+            <div class="border-l-4 border-red-500 pl-4 py-2 bg-[#110505]"><p class="text-red-300 text-[10px] font-bold uppercase tracking-widest">Gate: Pelvic shift to reach further.</p></div>
+        </section>
+
+        <!-- 06. PEARLS OFF THE MAT -->
+        <section class="layer-box">
+            <h2 class="text-2xl mb-4 text-[#00e5ff]">06. PEARLS OFF THE MAT</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L1: Foundation</h3><p class="text-sm">Segmental bridge.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L2: Load</h3><p class="text-sm">Add heavy ankle weights.</p></div>
+                <div><h3 class="text-xs uppercase mb-2 text-gray-500">L3: Flow</h3><p class="text-sm">Continuous fluid traction.</p></div>
+            </div>
+            <div class="border-l-4 border-red-500 pl-4 py-2 bg-[#110505]"><p class="text-red-300 text-[10px] font-bold uppercase tracking-widest">Gate: Weight resting on cervical spine.</p></div>
+        </section>
+    </div>
+
+    <script>
+        let time = 3000;
+        let timerRunning = false;
+        function toggleTimer() {
+            if(timerRunning) return;
+            timerRunning = true;
+            setInterval(() => {
+                time--;
+                document.getElementById('timerDisplay').innerText = Math.floor(time/60) + ":" + (time%60).toString().padStart(2, '0');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
